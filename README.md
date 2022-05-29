@@ -1,2 +1,8 @@
 # donutstream
-Ini adalah repository untuk tugas buat web HTML &amp; CSS mata kuliah Pemrograman Web I
+Donutstream membantu kamu untuk membuat dan menjual karya NFTs mu kepada penggemarmu, Donutstream juga bisa menggunakan moda pembayaran di bawah ini:
+
+GOPAY
+OVO
+DANA
+LINKAJA
+QRIS
