@@ -9,9 +9,27 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- smoothscroll -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://kit.fontawesome.com/5ee5214f9f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- header -->
+    <nav class="navbar-1">
+        <div class="brand-title">Brand Name</div>
+        <!-- hamburger menu -->
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <!-- links navbar menu -->
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <section id="header">
         <div class="container">
             <img src="images/logo.png" class="logo" alt="logo">
@@ -31,8 +49,7 @@
         </div>
     </section>
 
-    <!-- navbar -->
-    <nav id="sideNav">
+    <!-- <nav id="sideNav">
         <ul>
             <li><a href="#header">HOME</a></li>
             <li><a href="#about">ABOUT US</a></li>
@@ -42,9 +59,10 @@
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
-    <img src="images/menu.png" id="menuBtn" alt="menu-btn">
+    <img src="images/menu.png" id="menuBtn" alt="menu-btn"> -->
 
     <!-- about -->
+
     <section id="about">
         <div class="about-left-col">
             <img src="images/about.png">
@@ -70,6 +88,7 @@
     </section>
 
     <!-- features -->
+
     <section id="features">
         <div class="feature-row">
             <div class="feature-col">
@@ -130,6 +149,7 @@
 
 
     <!-- offer -->
+
     <section id="offer">
         <div class="about-left-col">
             <img src="images/offer.png">
@@ -157,6 +177,7 @@
     </section>
 
     <!-- contact -->
+
     <section id="contact">
         <div class="container contact-row">
             <div class="contact-left-col">
@@ -189,6 +210,7 @@
 
 
     <!-- footer -->
+    
     <section id="footer">
         <div class="container footer-row">
             <hr>
@@ -246,26 +268,6 @@
         <img src="images/linkedin.png" alt="">
     </div>
 
-    <script>
-        // ketika nav side button di klik menu akan muncul dari samping kanan
-        var menuBtn = document.getElementById("menuBtn");
-        var sideNav = document.getElementById("sideNav");
-
-        sideNav.style.right = "-250px"; //css yang di masukkan
-        menuBtn.onclick = function(){
-            if(sideNav.style.right == "-250px") {
-                sideNav.style.right = "0";
-            } else {
-                sideNav.style.right = "-250px";
-            }
-        }
-
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1000,
-            speedDuration: true
-        });
-        spe
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
