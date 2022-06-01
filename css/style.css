@@ -331,6 +331,7 @@ hr {
     align-items: center;
     background-color: #333;
     color: white;
+    padding: 0.4rem;
 }
 
 .brand-title {
@@ -361,6 +362,7 @@ hr {
 
 .navbar-links li:hover {
     background-color: #555;
+    border-radius: 5px;
 }
 
 .toggle-button {
@@ -381,7 +383,11 @@ hr {
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+
+
+/* @media only screen and (max-width: 770px) */
+@media (max-width: 800px) {
+    /* navbar */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -412,11 +418,8 @@ hr {
     .navbar-links.active {
         display: flex;
     }
-}
 
 
-/* @media only screen and (max-width: 770px) */
-@media (max-width: 600px) {
     #header {
         background-image: none;
     }
