@@ -322,29 +322,6 @@ hr {
     flex-basis: 40%;
 }
 
-/* social-icons */
-
-.social-icons {
-    width: 50px;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%); /* konten verticaly center */
-    z-index: 1;
-}
-
-.social-icons img {
-    display: block;
-    width: 20px;
-    margin: 0 auto 20px;
-    cursor: pointer;
-}
-
-
-
-
-
-
 /* navbar -1  */
 
 .navbar-1 {
