@@ -4,7 +4,7 @@
 * {
     margin: 0;
     padding: 0;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
 }
 
 .font-primary,
@@ -25,8 +25,8 @@
 }
 
 .logo {
-    margin-top: 30px;
-    width: 100px;
+    margin: auto;
+    width: 30px;
 }
 
 .header-text {
@@ -34,18 +34,9 @@
     margin-top: 140px;
 }
 
-h1 {
+/* h1 {
     font-size: 33px;
-}
-
-/* box antara h1 header dan paragraph */
-.square {
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    background: #f67c92;
-    margin: 15px 0;
-}
+} */
 
 .common-btn {
     padding: 18px 40px;
@@ -65,32 +56,6 @@ p {
 .header-text button {
     margin-top: 20px;
     margin-bottom: 60px;
-}
-
-/* line-1 - line-3 adalah kotak 3 kecil di bwah readmore */
-.line-1 {
-    width: 15px;
-    height: 15px;
-    background: #f67c92;
-    display: inline-block;
-}
-
-.line-2 {
-    width: 80px;
-    height: 1px;
-    background: #f67c92;
-    display: inline-block;
-}
-
-.line-3 {
-    width: 60px;
-    height: 1px;
-    background: #f67c92;
-    display: inline-block;
-}
-
-.line {
-    line-height: 8px;
 }
 
 /* about */
@@ -336,9 +301,10 @@ hr {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #2d3436;
     padding: 0.4rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .brand-title {
@@ -363,18 +329,19 @@ hr {
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: #6c5ce7;
     padding: 1rem;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color: #dfe6e9;
     border-radius: 5px;
 }
 
+/* hamburger button */
 .toggle-button {
     position: absolute;
-    top: .75rem;
+    top: 1.3rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -386,7 +353,7 @@ hr {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: #6c5ce7;
     border-radius: 10px;
 }
 
