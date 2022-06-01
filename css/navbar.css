@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+/* navbar -1  */
+.logo-container {
+    display: flex; /* pakai flex agar img dan txt sama rata  */ 
+    align-items: center; /* agart item rata tengah  */ 
+    width: auto; /* cari tahu kegunaan width  */ 
+    margin: 0;
+    height: 40px;
+  }
+  
+  .logo-container img {
+    width: 22px;
+  }
+  
+  .logo {
+    margin-left: 28px;
+  }
+  
+  .logo-txt {
+    font-size: 20px;
+    line-height: 75px; /* cari tahu kegunaan line height  */ 
+    padding-left: 5px;
+    font-weight: bold;
+    color: wheat;
+ }
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #2d3436;
+    padding: 0.4rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.brand-title {
+    font-size: 1rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #6c5ce7;
+    padding: 0.5rem;
+}
+
+.navbar-links li:hover {
+    background-color: #dfe6e9;
+    border-radius: 5px;
+}
+
+/* hamburger button */
+.toggle-button {
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #6c5ce7;
+    border-radius: 10px;
+}
+
+
+
+/* @media only screen and (max-width: 770px) */
+@media (max-width: 800px) {
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+    /* navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+        padding-right: 0rem;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: 2rem 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
