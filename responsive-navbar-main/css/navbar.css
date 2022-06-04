@@ -1,5 +1,15 @@
-body {
+  /* --------------- */
+ /* general styling */
+/* --------------- */
+
+* {
+    padding: 0;
     margin: 0;
+}
+
+
+body {
+    font-family: sans-serif;
     /* to see that the navbar is sticky */
     height: 200vh; 
     background: rgb(2,0,36);
@@ -7,14 +17,18 @@ body {
 }
 
 a {
-    color: black;
+    color: rgb(187, 122, 1);
     text-decoration: none;
     font: bold 22px sans-serif;
 }
 
 a:hover {
-    color: darkcyan;
+    color: rgb(54, 35, 0);
 }
+
+  /* --------------- */
+ /* navbar  styling */
+/* --------------- */
 
 .navbar {
     /* make it stick */
@@ -33,14 +47,9 @@ a:hover {
     align-items: center;
 }
 
-.logo-image {
-    display: block;
-    height: 48px
-}
-
 .nav-menu {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     list-style-type: none;
     list-style-image: none;
 }
@@ -53,7 +62,7 @@ a:hover {
 .bar {
     width: 20px;
     height: 3px;
-    background-color: black;
+    background-color: rgb(187, 122, 1);
     margin: 4px auto;
 }
 
@@ -61,7 +70,31 @@ a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* logo */
+.logo-image {
+    display: block;
+    height: 48px
+}
+
+.logo-container {
+    display: flex; /* pakai flex agar img dan txt sama rata  */ 
+    /* align-items: center; agart item rata tengah   */
+    /* width: auto; cari tahu kegunaan width   */
+    /* margin: 0; */
+    /* height: 20px; */
+}
+
+.logo-txt {
+    font-size: 40px;/* cari tahu kegunaan line height  */ 
+    padding-left: 5px;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(187, 122, 1);
+}
+
+
+/* responsive */
+@media only screen and (max-width: 800px) {
     .navbar {
         flex-direction: column;
     }
@@ -85,7 +118,7 @@ a:hover {
     }
 
     .menu-icon:hover .bar {
-        background-color: darkcyan;
+        background-color: rgb(54, 35, 0);
     }
 
     .nav-menu {
