@@ -73,6 +73,7 @@ a:hover {
 /* logo */
 .logo-image {
     display: block;
+    margin: auto 0;/* margin atas bawah auto untuk rata atas bawah  */
     height: 48px
 }
 
@@ -85,8 +86,10 @@ a:hover {
 }
 
 .logo-txt {
-    font-size: 40px;/* cari tahu kegunaan line height  */ 
+    margin: auto 0; /* margin atas bawah auto untuk rata atas bawah  */ 
+    font-size: 40px;
     padding-left: 5px;
+    /* line-height: 75px; */
     align-items: center;
     font-weight: bold;
     color: rgb(187, 122, 1);
@@ -110,10 +113,12 @@ a:hover {
         text-align: end;
     }
 
+    /* hamburger menu */
     .menu-icon {
         display: block;
         position: absolute;
-        top: 20px;
+        margin: auto 0px;
+        top: 22px;
         right: 5%;
     }
 
@@ -129,4 +134,22 @@ a:hover {
     .active {
         display: block;
     }
+}
+
+@media only screen and (max-width: 580px){
+
+    /* logo */
+    .logo-image {
+        height: 28px
+    }
+
+    .logo-txt {
+        font-size: 20px;
+    }
+
+    /* hamburger menu */
+    .menu-icon {
+        top: 12px;
+    }
+    
 }
