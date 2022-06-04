@@ -5,6 +5,7 @@
 * {
     padding: 0;
     margin: 0;
+    /* border: 1px solid red; */
 }
 
 
@@ -12,9 +13,19 @@ body {
     font-family: sans-serif;
     /* to see that the navbar is sticky */
     height: 200vh; 
-    background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,104,255,1) 100%); 
+    /* background: rgb(2,0,36); */
+    /* background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,104,255,1) 100%);  */
 }
+
+.container {
+    padding: 48px 0;
+}
+
+
+
+  /* ---------------- */
+ /* utility  styling */
+/* ---------------- */
 
 a {
     color: rgb(187, 122, 1);
@@ -33,18 +44,19 @@ a:hover {
 .navbar {
     /* make it stick */
     position: sticky;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky; */
     top: 0;
     /* in front of all other elements */
     z-index: 99;
     /* set background */
     background-color: white;
-    padding: 10px 5%;
+    padding: 8px 5%;
 
     /* define flex */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .nav-menu {
@@ -74,7 +86,7 @@ a:hover {
 .logo-image {
     display: block;
     margin: auto 0;/* margin atas bawah auto untuk rata atas bawah  */
-    height: 48px
+    height: 30px
 }
 
 .logo-container {
@@ -87,8 +99,8 @@ a:hover {
 
 .logo-txt {
     margin: auto 0; /* margin atas bawah auto untuk rata atas bawah  */ 
-    font-size: 40px;
-    padding-left: 5px;
+    font-size: 30px;
+    padding-left: 2px;
     /* line-height: 75px; */
     align-items: center;
     font-weight: bold;
@@ -118,7 +130,7 @@ a:hover {
         display: block;
         position: absolute;
         margin: auto 0px;
-        top: 22px;
+        top: 14px;
         right: 5%;
     }
 
@@ -140,7 +152,7 @@ a:hover {
 
     /* logo */
     .logo-image {
-        height: 28px
+        height: 20px
     }
 
     .logo-txt {
