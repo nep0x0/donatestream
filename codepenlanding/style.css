@@ -1,0 +1,108 @@
+/* https://codepen.io/ekrof/pen/OJVoaqK */
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+h2 {
+    font-size: 28px;
+}
+p {
+    font-size: 18x;
+    line-height: 24px;
+}
+button {
+    background: #4d59ff;
+    color: #fff;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+.flex-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.flex-section h1 span {
+    text-decoration: underline;
+}
+.flex-section .flex-section-text {
+    max-width: 500px;
+}
+.flex-section .flex-section-img {
+    max-width: max-content;
+}
+.flex-section > div {
+    flex: 1;
+    margin: 0 20px;
+}
+.flex-section > div img {
+    border: 1px solid;
+}
+.landing-header {
+    position: fixed;
+    background: #14182d;
+    top: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.landing-header span {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.landing-stack {
+    background: #14182d;
+    padding: 50px 20px;
+}
+.landing-hero {
+    background: #14182d;
+    margin-top: 50px;
+}
+.landing-roles {
+    background: #2a3555;
+}
+.landing-lenio {
+    background: #fa3657;
+    color: #333;
+    padding: 50px 20px;
+}
+.landing-tools {
+    background: #e3eafc;
+    padding: 50px 20px;
+}
+.landing-tools h2 {
+    color: #333;
+    text-align: center;
+}
+.landing-tools .flex-section {
+    justify-content: space-around;
+    padding: 0;
+}
+.landing-tools .flex-section > div {
+    background: #1f253f;
+    border: 1px solid;
+    max-width: 320px;
+    padding: 20px;
+}
+.landing-tools .flex-section > div h3 {
+    text-align: center;
+    background: #e3eafc;
+    color: #333;
+    padding: 10px 0;
+}

@@ -165,3 +165,59 @@ a:hover {
     }
     
 }
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.flex-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+}
+
+
+/* test landing hero */
+.landing-hero {
+    background: #14182d;
+    /* margin-top: 0px; */
+    color: #fff;
+}
+
+
+
+.landing-hero h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.landing-hero p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.flex-section-text,
+.flex-section-img {
+    margin: 100px 50px;
+}
+
+.flex-section-img img {
+    width: 250px;
+}
