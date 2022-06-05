@@ -227,14 +227,6 @@ body {
     top: 0;
 }
 
-.navbar .logo a {
-    padding-left: 3rem;
-}
-
-.navbar .menu-items {
-    padding-right: 1.8rem;
-}
-
 
 
 /* ===================
@@ -391,7 +383,13 @@ footer p a {
 
 /* from responsive */
 /* navbar coppy */
+.navbar .logo a {
+    padding-left: 3rem;
+}
 
+.navbar .menu-items {
+    padding-right: 1.8rem;
+}
 
 
 
