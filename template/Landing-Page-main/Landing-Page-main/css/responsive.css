@@ -363,12 +363,10 @@
     }
 }
 
-
-
 @media screen and (max-width: 780px) {
-    .container {
+    /* .container {
         padding: 0 2rem;
-    }
+    } */
 
     .text-side .title h1 {
         font-size: 2.4rem;
