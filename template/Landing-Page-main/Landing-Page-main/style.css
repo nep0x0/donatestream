@@ -385,8 +385,21 @@ footer p a {
 
 
 /* teset */
-/* .logo img {
-    width: 50px;
-    padding-left: 40px;
-    margin: auto 0;
-} */
+
+
+#services .details p,
+#support .details p {
+    text-align: center;
+}
+
+#services,
+#support {
+    justify-content: center;
+}
+
+
+
+/* paralax payment logo */
+.parallax-payment-logo {
+    height: 70;
+}
