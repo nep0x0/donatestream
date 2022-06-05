@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
+/* psuedo class root */
 :root{
     --purple:#814096;
     --pink:#F83292;
-    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
+    /* gradasi warna */
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink)); 
 }
 
 *{
@@ -15,13 +17,18 @@
     text-transform: capitalize;
 }
 
+/* ketika menseleksi kalimat akan background akan berwarna pink dan huruf putih */
 *::selection{
     background:var(--pink);
     color:#fff;
 }
 
 html{
+    /* Apabila parent element tag <div> adalah tag <body> yang ukuran fontnya tidak dinyatakan, 
+    maka perent element akan ditentukan oleh ukuran default text web browser. Ukuran default web 
+    browser ini disebut sebagai base text size yang umumnya berukuran 16px. */
     font-size: 62.5%;
+    /* Properti overflowmenentukan apa yang harus terjadi jika konten melebihi kotak elemen. */
     overflow-x: hidden;
 }
 
@@ -96,29 +103,38 @@ header .navbar a:hover{
     color:var(--pink);
 }
 
+
+/* checkbox for hamburger menu */
 header input{
     display: none;
 }
-
+/* hamburger menu styling */
 header label{
     font-size: 3rem;
     color:var(--purple);
+    /* agar kursor menjadi ikon tunjuk jari/pointer */
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
 }
 
+/* gambar background di landing hero pojok kanan */
 .home{
     display: flex;
+    /* Properti align-itemsmenentukan perataan default untuk item di dalam wadah fleksibel. */
     align-items: center;
     justify-content: center;
+    /* no repeat agar image tidak repeate */
     background:url(../images/home-bg-img.png) no-repeat;
+    /* Ubah ukuran gambar latar belakang untuk menutupi seluruh wadah, bahkan jika itu harus 
+    meregangkan gambar atau memotong sedikit dari salah satu tepi */
     background-size: cover;
     background-position: center;
 }
 
 .home .image img{
     width:40vw;
+    /* animasi gambar mengambang secara linier durasi 3second dan infinite*/
     animation: float 3s linear infinite;
 }
 
@@ -150,12 +166,26 @@ header label{
 
 .features .box-container{
     display: flex;
+    /* rata atas bawah */
     align-items: center;
+    /* rata kkiri kanan */
     justify-content: center;
+    /* Properti flex-wrapmenentukan apakah item fleksibel harus dibungkus atau tidak. */
+    /* alaupun konten box sudah melebihi lebar pembungkusnya tidak akan 
+    berpengaruh maka dari itu disini saya berikan pada containernya, seperti di 
+    atas flex-wrap: wrap */
+    /* akan otomatis mengecek berapa lebar dari parent boxnya apakah cukup atau 
+    parentnya sudah penuh ? maka dia otomatis mengatur kolom box childnya
+     dan berusaha seproposional mungkin. Intinya dia akan membagi lebarnya \
+     dan bila lebarnya tidak cukup lagi maka dia akan turun kebawah seperti berikut  */
     flex-wrap: wrap;
 }
 
 .features .box-container .box{
+    /* flex: flex-grow flex-shrink flex-basis */
+    /* Angka yang menentukan berapa banyak item akan tumbuh relatif terhadap sisa item fleksibel */
+    /* Angka yang menentukan berapa banyak item akan menyusut relatif terhadap sisa item fleksibel */
+    /* Panjang item. Nilai hukum: "auto", "inherit", atau angka yang diikuti oleh "%", "px", "em" atau satuan panjang lainnya */
     flex:1 1 30rem;
     background:#fff;
     border-radius: .5rem;
@@ -354,6 +384,8 @@ header label{
     padding-bottom: 3rem;
 }
 
+
+/* nth child 2 maksudnya bx pricing ke2 akan selalu brder pink */
 .pricing .box-container .box:nth-child(2),
 .pricing .box-container .box:hover{
     border:.2rem solid var(--pink);
@@ -568,6 +600,7 @@ header label{
 
 @media (max-width:768px){
 
+    /* ketika layar 768px hamburger menu muncul */
     header label{
         visibility: visible;
         opacity: 1;
@@ -575,34 +608,41 @@ header label{
 
     header .navbar{
         position: absolute;
+        /* top 100% agar menu muncul di bawah navbar */
         top:100%; left: 0;
         width:100%;
         background:#fff;
         padding:1rem 2rem;
         border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        /* asal menu muncul jika di ubah top ke right dan scaleY ke X maka menu akan muncul dari kanan ke kiri*/
         transform-origin: top;
+        /* dari skala suduk 0 sampai ke 1 */
         transform: scaleY(0);
         opacity: 0;
         transition: .2s linear;
     }
 
     header .navbar a{
+        /* display block agar link menu sejajar kebawah */
         display: block;
         margin:2rem 0;
         font-size: 2rem;
     }
 
+    /* jika checkbox = checked maka ,  .navbar muncul dari sudut 0 Yke 1*/
     header input:checked ~ .navbar{
         transform: scaleY(1);
         opacity: 1;
     }
 
+    /* jika checkbox = checked maka , HAMBURGER menu berubah menjadi silang */
     header input:checked ~ label::before{
         content:'\f00d';
     }
 
     .home{
+        /* agar posisi item di dalamnya terbalik ABC jadi CAD secara kolom */
         flex-flow: column-reverse;
     }
 
