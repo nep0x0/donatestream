@@ -39,28 +39,25 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    z-index: 99;
-    overflow: hidden;
+    /* z-index: 99; */
+    /* overflow: hidden; */
 }
 
 .text-side {
     flex: 0 1 750px;
-}
-
-#home .text-side {
-    flex: 0 1 450px;
+    padding-left: 50px;
 }
 
 .image-side {
-    flex: 0 1 550px;
+    flex: 0 1 500px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-img {
+/* img {
     width: 100%;
-}
+} */
 
 .title h1 {
     font-size: 3rem;
@@ -230,6 +227,16 @@ img {
     top: 0;
 }
 
+.navbar .logo a {
+    padding-left: 3rem;
+}
+
+.navbar .menu-items {
+    padding-right: 1.8rem;
+}
+
+
+
 /* ===================
     Header area end
 ===================== */
@@ -244,43 +251,90 @@ img {
 ======================= */
 
 /* home */
-#home {
+/* #home {
     min-height: 85vh;
     padding-top: 108px;
-}
+} */
 
-/* scroll top button */
-.scroll-top-btn {
-    position: fixed;
-    bottom: 1rem;
-    right: 2rem;
+#home {
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    height: 3rem;
-    width: 3rem;
+    height: 100vh;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    background: #6C63FF;
-    border-radius: 0.2rem;
-    text-decoration: none;
-    transition: all 0.4s ease;
 }
 
-.scroll-top-btn.active {
-    bottom: 2rem;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+#home .text-side {
+    flex: 0 1 500px;
 }
 
-.scroll-top-btn span {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 600;
+#home .image-side img{
+    width: 30vw;
+    animation: float 2.5s linear infinite;
 }
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(-0rem);
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+}
+
+/* Get Tips */
+#tips {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#tips p {
+    text-align: center;
+}
+
+/* create */
+
+#create {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#create p {
+    text-align: center;
+}
+
+/* create */
+
+#payment_method {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#payment_method p {
+    text-align: center;
+}
+
+#payment_method h1 {
+    text-align: center;
+}
+
 
 /* footer */
 footer {
@@ -306,24 +360,12 @@ footer p a {
 ========================= */
 
 
-#home .image-side img{
-    width: 49vw;
-    animation: float 2.5s linear infinite;
-}
-
-@keyframes float{
-    0%, 100%{
-        transform: translateY(-0rem);
-    }
-    50%{
-        transform: translateY(-1rem);
-    }
-}
 
 
 
 
-/* teset */
+
+/* test */
 
 
 #services .details p,
@@ -342,3 +384,45 @@ footer p a {
 .parallax-payment-logo {
     height: 70;
 }
+
+
+
+
+
+/* from responsive */
+/* navbar coppy */
+
+
+
+
+/* #home {
+    flex-direction: column-reverse;
+}
+
+#services {
+    flex-direction: column;
+}
+
+#pricing {
+    flex-direction: column-reverse;
+}
+
+#support {
+    flex-direction: column;
+}
+
+#contact {
+    flex-direction: column-reverse;
+} */
+
+/* .image-side img {
+    padding-top: 20rem;
+} */
+
+/* .text-side .title {
+    padding-top: 2rem;
+} */
+
+/* #home {
+    padding-top: 5rem;
+} */
