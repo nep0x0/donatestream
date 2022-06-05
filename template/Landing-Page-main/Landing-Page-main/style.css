@@ -44,7 +44,7 @@ body {
     align-items: center;
     /* -webkit-box-pack: justify; */
     /* -ms-flex-pack: justify; */
-    justify-content: space-between;
+    justify-content: center;
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
     z-index: 99;
@@ -53,7 +53,13 @@ body {
 .text-side {
     /* -webkit-box-flex: 0; */
     /* -ms-flex: 0 1 720px; */
-    flex: 0 1 720px;
+    flex: 0 1 750px;
+}
+
+#home .text-side {
+    /* -webkit-box-flex: 0; */
+    /* -ms-flex: 0 1 720px; */
+    flex: 0 1 450px;
 }
 
 .image-side {
@@ -368,7 +374,7 @@ footer p a {
 
 
 #home .image-side img{
-    width: 32vw;
+    width: 49vw;
     animation: float 2.5s linear infinite;
 }
 
