@@ -325,9 +325,19 @@ header .navbar .btn {
     flex-wrap: wrap;
 }
 
+@media (max-width:1066px){
+    
+    .review .box-container {
+        max-width: 51rem;
+        margin: auto;
+    }
+
+}
+
+
 .review .box-container .box{
     background:#fff;
-    margin:1rem;
+    margin:0.5rem;
     padding:1rem;
     text-align: center;
     position: relative;
@@ -335,12 +345,13 @@ header .navbar .btn {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     flex:1 1 30rem;
     border-radius: .5rem;
+    max-width: 24rem;
 }
 
 .review .box-container .box .fa-quote-right{
     position: absolute;
     top:1rem; right:2rem;
-    font-size: 8rem;
+    font-size: 3rem;
     color:var(--pink);
     opacity: .3;
 }
