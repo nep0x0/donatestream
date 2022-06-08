@@ -502,7 +502,8 @@ header .navbar .btn {
 
 .footer{
     padding-top: 3rem;
-    background:url(../images/footer-bg.png) no-repeat;
+    /* background:url(../images/footer-bg.png) no-repeat; */
+    background-color: var(--pink);
     background-size: cover;
     background-position: center;
 }
