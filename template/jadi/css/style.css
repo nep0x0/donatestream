@@ -118,6 +118,10 @@ header label{
     opacity: 0;
 }
 
+header .navbar .btn {
+    color:#fff;
+}
+
 /* gambar background di landing hero pojok kanan */
 .home{
     display: flex;
