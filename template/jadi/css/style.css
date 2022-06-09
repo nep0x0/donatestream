@@ -2,8 +2,11 @@
 
 /* psuedo class root */
 :root{
-    --purple:#814096;
+    /* --purple:#814096; */
+    --purple:rgb(120 73 215);
     --pink:#F83292;
+    --black: rgb(39, 38, 44);
+    --blue: rgb(31, 199, 212);
     /* gradasi warna */
     --gradient:linear-gradient(90deg, var(--purple), var(--pink)); 
 }
@@ -48,7 +51,7 @@ section{
     margin-top: 1rem;
     padding:.8rem 3rem;
     border-radius: 5rem;
-    background:var(--gradient);
+    background:var(--blue);
     font-size: 1.7rem;
     color:#fff;
     cursor: pointer;
@@ -264,7 +267,8 @@ header .navbar .btn {
 .newsletter{
     text-align: center;
     padding:5rem 1rem;
-    background:url(../images/subscribe-bg.png) no-repeat;
+    /* background:url(../images/subscribe-bg.png) no-repeat; */
+    background-color: var(--purple);
     background-size: cover;
     background-position: center;
 }
@@ -515,7 +519,7 @@ header .navbar .btn {
 .footer{
     padding-top: 3rem;
     /* background:url(../images/footer-bg.png) no-repeat; */
-    background-color: var(--pink);
+    background-color: var(--black);
     background-size: cover;
     background-position: center;
 }
