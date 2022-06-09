@@ -220,7 +220,7 @@ header .navbar .btn {
 }
 
 .about{
-    background:url(../images/about-bg.png) no-repeat;
+    /* background:url(../images/about-bg.png) no-repeat; */
     background-size: cover;
     background-position: center;
     padding-bottom: 3rem;
