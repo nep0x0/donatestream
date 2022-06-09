@@ -130,7 +130,7 @@ header .navbar .btn {
     align-items: center;
     justify-content: center;
     /* no repeat agar image tidak repeate */
-    background:url(../images/home-bg-img.png) no-repeat;
+    /* background:url(../images/home-bg-img.png) no-repeat; */
     /* Ubah ukuran gambar latar belakang untuk menutupi seluruh wadah, bahkan jika itu harus 
     meregangkan gambar atau memotong sedikit dari salah satu tepi */
     background-size: cover;
@@ -140,15 +140,16 @@ header .navbar .btn {
 .home .image img{
     width:40vw;
     /* animasi gambar mengambang secara linier durasi 3second dan infinite*/
-    animation: float 3s linear infinite;
+    /* animation: float 3s linear infinite; */
+    animation: float 3s ease-in-out 1s infinite;
 }
 
 @keyframes float{
-    0%, 100%{
-        transform: translateY(0rem);
+    0%{
+        transform: translate(0px, 0px);
     }
     50%{
-        transform: translateY(-3.5rem);
+        transform: translate(5px, 10px);
     }
 }
 
