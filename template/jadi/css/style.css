@@ -224,9 +224,57 @@ header .navbar .btn {
     padding: 1rem 0;
 }
 
-/* --------------- */
-/* abouut styling */
-/* ------------- */
+
+  /* ------------------------ */
+ /* home start money styling */
+/* ------------------------ */
+.home-start-money{
+    /* background:url(../images/about-bg.png) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+
+.home-start-money .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-start-money .column .image{
+    flex:1 1 40rem;
+    transform: rotateY(180deg);
+    display: inline-block;
+    
+}
+
+.home-start-money .column .image img{
+    width:30%;
+}
+
+.home-start-money .column .content{
+    flex:1 1 40rem;
+}
+
+.home-start-money .column .content h3{
+    font-size: 3rem;
+    color:#666;
+}
+
+.home-start-money .column .content p{
+    font-size: 1.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.home-start-money .column .content .buttons a:last-child{
+    margin-left: 2rem;
+}
+
+  /* -------------- */
+ /* abouut styling */
+/* -------------- */
 .about{
     /* background:url(../images/about-bg.png) no-repeat; */
     background-size: cover;
@@ -659,6 +707,9 @@ header .navbar .btn {
 
 @media (max-width:768px){
 
+  /* ------------------ */
+ /* header 768 queries */
+/* ------------------ */
     /* ketika layar 768px hamburger menu muncul */
     header label{
         visibility: visible;
@@ -700,6 +751,9 @@ header .navbar .btn {
         content:'\f00d';
     }
 
+  /* ------------------ */
+ /* home 768   queries */
+/* ------------------ */
     .home{
         /* agar posisi item di dalamnya terbalik ABC jadi CAD secara kolom */
         flex-flow: column-reverse;
@@ -717,9 +771,23 @@ header .navbar .btn {
         font-size: 1.5rem;
     }
 
+  /* ---------------------------- */
+ /* home make money 768  queries */
+/* ---------------------------- */
+.home-start-money{
+    background-position: right;
+}
+/* --
+
+  /* ------------------ */
+ /* about 768  queries */
+/* ------------------ */
     .about{
         background-position: right;
     }
+  /* ----------------------- */
+ /* newsletter 768  queries */
+/* ----------------------- */
 
     .newsletter p{
         width:auto;
@@ -732,6 +800,9 @@ header .navbar .btn {
     html{
         font-size: 50%;
     }
+  /* ------------------ */
+ /* about 450  queries */
+/* ------------------ */
 
     .about .column .content .buttons a{
         width:100%;
@@ -739,6 +810,19 @@ header .navbar .btn {
     }
 
     .about .column .content .buttons a:last-child{
+        margin: 1rem 0;
+    }
+
+  /* ---------------------------- */
+ /* home make money 450  queries */
+/* ---------------------------- */
+
+    .home-start-money .column .content .buttons a{
+        width:100%;
+        text-align: center;
+    }
+
+    .home-start-money .column .content .buttons a:last-child{
         margin: 1rem 0;
     }
 
