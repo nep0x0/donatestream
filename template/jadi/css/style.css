@@ -240,11 +240,12 @@ header .navbar .btn {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .home-start-money .column .image{
     flex:1 1 40rem;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
     display: inline-block;
     
 }
