@@ -108,6 +108,12 @@ header .navbar a:hover{
 }
 
 
+/* untuk child ke lima yang isinya button connect wallet tidak hover ke warna pink */
+header .navbar a:nth-child(5) {
+    color: #fff;
+}
+
+
 /* checkbox for hamburger menu */
 header input{
     display: none;
