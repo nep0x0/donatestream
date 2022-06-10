@@ -512,10 +512,10 @@ header .navbar .btn {
 }
 
 .team .box-container .box .user img{
-    border-radius: 50%;
+    border-radius: 10%;
     object-fit: cover;
-    height: 7rem;
-    width:7rem;
+    height: 17rem;
+    width: 10prem;
     margin-top: 2rem;
 }
 
