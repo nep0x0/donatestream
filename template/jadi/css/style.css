@@ -393,10 +393,10 @@ header .navbar .btn {
 
 
   /* ------------------ */
- /* review     styling */
+ /* payment     styling */
 /* ------------------ */
 
-.review .box-container{
+.payment .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,27 +405,27 @@ header .navbar .btn {
 
 @media (max-width:1066px){
     
-    .review .box-container {
+    .payment .box-container {
         max-width: 51rem;
         margin: auto;
     }
 
 }
 
-.review .box-container .box{
-    background:#fff;
+.payment .box-container .box{
+    /* background:#fff; */
     margin:0.5rem;
     padding:1rem;
     text-align: center;
     position: relative;
-    border:.1rem solid rgba(0,0,0,.2);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    /* border:.1rem solid rgba(0,0,0,.2); */
+    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); */
     flex:1 1 30rem;
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
     max-width: 24rem;
 }
 
-.review .box-container .box .fa-quote-right{
+.payment .box-container .box .fa-quote-right{
     position: absolute;
     top:1rem; right:2rem;
     font-size: 3rem;
@@ -433,26 +433,26 @@ header .navbar .btn {
     opacity: .3;
 }
 
-.review .box-container .box .user img{
+.payment .box-container .box .user img{
     border-radius: 50%;
     object-fit: cover;
-    height: 7rem;
-    width:7rem;
+    height: 17rem;
+    width:17rem;
     margin-top: 2rem;
 }
 
-.review .box-container .box .user h3{
+.payment .box-container .box .user h3{
     color:var(--pink);
     font-size: 2rem;
 }
 
-.review .box-container .box .user .stars i{
+.payment .box-container .box .user .stars i{
     color:var(--purple);
     font-size: 1.5rem;
     padding:1rem 0;
 }
 
-.review .box-container .box .comment{
+.payment .box-container .box .comment{
     color:#666;
     font-size: 1.4rem;
     padding:1rem;
