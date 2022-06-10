@@ -405,10 +405,6 @@ header .navbar .btn {
 
 }
 
-  /* ------------------ */
- /* review     styling */
-/* ------------------ */
-
 .review .box-container .box{
     background:#fff;
     margin:0.5rem;
@@ -459,6 +455,27 @@ header .navbar .btn {
   /* ------------------ */
  /* team     styling */
 /* ------------------ */
+#team {
+    min-height: 80vh;
+    padding:0 9%;
+    padding-top: 16rem;
+    padding-bottom: 2rem;
+}
+.team .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1066px){
+    
+    .team .box-container {
+        max-width: 51rem;
+        margin: auto;
+    }
+
+}
 
 .team .box-container .box{
     background:#fff;
@@ -505,6 +522,8 @@ header .navbar .btn {
     font-size: 1.4rem;
     padding:1rem;
 }
+
+
 
 
 
@@ -878,4 +897,10 @@ header .navbar .btn {
         margin: 1rem 0;
     }
 
+  /* ---------------------------- */
+ /* team            450  queries */
+/* ---------------------------- */
+    #team {
+        padding-top: 10rem;
+    }
 }
