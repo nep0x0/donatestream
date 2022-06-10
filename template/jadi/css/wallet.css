@@ -1,0 +1,44 @@
+.connect-wallet-modal {
+    width: 300px;
+    height: auto;
+    background: #fff;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  }
+  .connect-wallet-title {
+    color: rgb(39, 38, 44);
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .wallet-list {
+    list-style: none;
+    padding: 0px;
+  }
+  .wallet-list li {
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px auto;
+    background: linear-gradient(139.73deg, rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%);
+    color: rgb(39, 38, 44);
+  }
+  .wallet-list li:hover {
+    border-color: rgb(125, 236, 246);
+  }
+  .connect-wallet-footer {
+    color: rgb(39, 38, 44);
+    text-align: center;
+  }
+  .connect-wallet-footer a {
+    color: rgb(0, 157, 154);
+  }
+
+  #wallet {
+    min-height: 80vh;
+    padding: 0 9%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
