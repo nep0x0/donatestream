@@ -224,6 +224,9 @@ header .navbar .btn {
     padding: 1rem 0;
 }
 
+/* --------------- */
+/* abouut styling */
+/* ------------- */
 .about{
     /* background:url(../images/about-bg.png) no-repeat; */
     background-size: cover;
@@ -268,6 +271,11 @@ header .navbar .btn {
     margin-left: 2rem;
 }
 
+
+
+  /* ------------------ */
+ /* newsletter styling */
+/* ------------------ */
 .newsletter{
     text-align: center;
     padding:5rem 1rem;
@@ -327,6 +335,11 @@ header .navbar .btn {
     color:var(--pink);
 }
 
+
+  /* ------------------ */
+ /* review     styling */
+/* ------------------ */
+
 .review .box-container{
     display: flex;
     align-items: center;
@@ -343,6 +356,9 @@ header .navbar .btn {
 
 }
 
+  /* ------------------ */
+ /* review     styling */
+/* ------------------ */
 
 .review .box-container .box{
     background:#fff;
@@ -390,6 +406,11 @@ header .navbar .btn {
     padding:1rem;
 }
 
+
+
+  /* ------------------ */
+ /* pricing    styling */
+/* ------------------ */
 .pricing .box-container{
     display: flex;
     align-items: center;
@@ -410,7 +431,7 @@ header .navbar .btn {
 }
 
 
-/* nth child 2 maksudnya bx pricing ke2 akan selalu brder pink */
+/* nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink */
 .pricing .box-container .box:nth-child(2),
 .pricing .box-container .box:hover{
     border:.2rem solid var(--pink);
@@ -451,6 +472,12 @@ header .navbar .btn {
     color:tomato;
 }
 
+  /* ------------------ */
+ /* contact    styling */
+/* ------------------ */
+  /* --------------------- */
+ /* depreceted or not use */
+/* --------------------- */
 .contact{
     display: flex;
     align-items: center;
@@ -520,6 +547,12 @@ header .navbar .btn {
     color:var(--pink);
 }
 
+
+
+
+  /* ------------------ */
+ /* footer     styling */
+/* ------------------ */
 .footer{
     padding-top: 3rem;
     /* background:url(../images/footer-bg.png) no-repeat; */
