@@ -276,6 +276,13 @@ header .navbar .btn {
   /* -------------- */
  /* abouut styling */
 /* -------------- */
+#about {
+    min-height: 80vh;
+    padding:0 9%;
+    padding-top: 16rem;
+    padding-bottom: 2rem;
+}
+
 .about{
     /* background:url(../images/about-bg.png) no-repeat; */
     background-size: cover;
@@ -298,7 +305,7 @@ header .navbar .btn {
 }
 
 .about .column .image img{
-    width:30%;
+    width:100%;
 }
 
 .about .column .content{
@@ -900,7 +907,8 @@ header .navbar .btn {
   /* ---------------------------- */
  /* team            450  queries */
 /* ---------------------------- */
-    #team {
+    #team,
+    #about {
         padding-top: 10rem;
     }
 }
