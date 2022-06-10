@@ -18,6 +18,7 @@
     padding: 0px;
   }
   .wallet-list li {
+    cursor: pointer;
     border: 1px solid white;
     padding: 15px;
     border-radius: 15px;
@@ -33,7 +34,7 @@
     text-align: center;
   }
   .connect-wallet-footer a {
-    color: rgb(0, 157, 154);
+    color: rgb(120 73 215);;
   }
 
   #wallet {
