@@ -240,10 +240,13 @@ header .navbar .btn {
 
 .about .column .image{
     flex:1 1 40rem;
+    transform: rotateY(180deg);
+    display: inline-block;
+    
 }
 
 .about .column .image img{
-    width:50%;
+    width:100%;
 }
 
 .about .column .content{
