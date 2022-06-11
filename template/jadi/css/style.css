@@ -4,6 +4,8 @@
 :root{
     /* --purple:#814096; */
     --purple:rgb(120 73 215);
+    --purple2: #be2edd;
+    --deepkomaru: #30336b;
     --pink:#F83292;
     --black: rgb(39, 38, 44);
     --blue: rgb(31, 199, 212);
@@ -90,11 +92,11 @@ header{
 
 header .logo{
     font-size: 2rem;
-    color:var(--purple);
+    color:var(--deepkomaru);
 }
 
 header .logo span{
-    color:var(--pink);
+    color: var(--purple2);
 }
 
 header .navbar a{
@@ -170,7 +172,7 @@ header .navbar .btn {
 }
 
 .home .content h3 span{
-    color:var(--pink);
+    color:var(--purple2);
     text-transform: uppercase;
 }
 
