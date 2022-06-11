@@ -527,7 +527,7 @@ header .navbar .btn {
 }
 
 .team .box-container .box .user .stars i{
-    color:var(--purple);
+    color:var(--blue);
     font-size: 1.5rem;
     padding:1rem 0;
 }
