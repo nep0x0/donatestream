@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* psuedo class root */
 :root{
@@ -15,8 +15,10 @@
 
 *{
     font-family: 'Righteous';
-    margin:0; padding:0;
+    /* menetralisir margin padding default */
+    margin:0; padding:0; 
     box-sizing: border-box;
+    /* menghilangkan dekorasi teks/ garis bawah */
     text-decoration: none;
     outline: none; border:none;
     text-transform: capitalize;
@@ -109,17 +111,16 @@ header .navbar a:hover{
     color:var(--pink);
 }
 
-
 /* untuk child ke lima yang isinya button connect wallet tidak hover ke warna pink */
 header .navbar a:nth-child(5) {
     color: #fff;
 }
 
-
 /* checkbox for hamburger menu */
 header input{
     display: none;
 }
+
 /* hamburger menu styling */
 header label{
     font-size: 3rem;
@@ -335,8 +336,6 @@ header .navbar .btn {
     margin-left: 2rem;
 }
 
-
-
   /* ------------------ */
  /* newsletter styling */
 /* ------------------ */
@@ -399,7 +398,6 @@ header .navbar .btn {
     color:var(--pink);
 }
 
-
   /* ------------------ */
  /* payment     styling */
 /* ------------------ */
@@ -421,15 +419,11 @@ header .navbar .btn {
 }
 
 .payment .box-container .box{
-    /* background:#fff; */
     margin:0.5rem;
     padding:1rem;
     text-align: center;
     position: relative;
-    /* border:.1rem solid rgba(0,0,0,.2); */
-    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); */
     flex:1 1 30rem;
-    /* border-radius: .5rem; */
     max-width: 24rem;
 }
 
@@ -465,7 +459,6 @@ header .navbar .btn {
     font-size: 1.4rem;
     padding:1rem;
 }
-
 
   /* ------------------ */
  /* team     styling */
@@ -538,10 +531,6 @@ header .navbar .btn {
     padding:1rem;
 }
 
-
-
-
-
   /* ------------------ */
  /* pricing    styling */
 /* ------------------ */
@@ -563,7 +552,6 @@ header .navbar .btn {
     text-align: center;
     padding-bottom: 3rem;
 }
-
 
 /* nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink */
 .pricing .box-container .box:nth-child(2),
@@ -612,7 +600,7 @@ header .navbar .btn {
   /* --------------------- */
  /* depreceted or not use */
 /* --------------------- */
-.contact{
+/* .contact{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -679,10 +667,7 @@ header .navbar .btn {
     top:-.5rem;
     font-size: 1.5rem;
     color:var(--pink);
-}
-
-
-
+} */
 
   /* ------------------ */
  /* footer     styling */
@@ -758,8 +743,55 @@ header .navbar .btn {
     text-align: center;
 }
 
+  /* ------------------ */
+ /* wallet     styling */
+/* ------------------ */
 
+.connect-wallet-modal {
+    width: 300px;
+    height: auto;
+    background: #fff;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  }
+  .connect-wallet-title {
+    color: rgb(39, 38, 44);
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .wallet-list {
+    list-style: none;
+    padding: 0px;
+  }
+  .wallet-list li {
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px auto;
+    background: linear-gradient(139.73deg, rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%);
+    color: rgb(39, 38, 44);
+  }
+  .wallet-list li:hover {
+    border-color: rgb(125, 236, 246);
+  }
+  .connect-wallet-footer {
+    color: rgb(39, 38, 44);
+    text-align: center;
+  }
+  .connect-wallet-footer a {
+    color: rgb(120 73 215);;
+  }
 
+  #wallet {
+    min-height: 80vh;
+    padding: 0 9%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
 
 
 
@@ -863,7 +895,6 @@ header .navbar .btn {
 .home-start-money{
     background-position: right;
 }
-/* --
 
   /* ------------------ */
  /* about 768  queries */
@@ -886,9 +917,9 @@ header .navbar .btn {
     html{
         font-size: 50%;
     }
-  /* ------------------ */
- /* about 450  queries */
-/* ------------------ */
+     /* ------------------ */
+    /* about 450  queries */
+   /* ------------------ */
 
     .about .column .content .buttons a{
         width:100%;
