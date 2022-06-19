@@ -145,6 +145,7 @@ header .navbar a:hover{
 /* Kelas pseudo CSS mencocokkan elemen berdasarkan posisinya di antara sekelompok saudara kandung.:nth-child() */
 header .navbar a:nth-child(5) {
     color: #fff;
+    text-align: center;
 }
 
 /* menghilangkan element/tampilan checkbox pada layar, navbar menggunakan input checkbox untuk membuat sistem true false atau buka tutup */
@@ -817,7 +818,7 @@ nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink
         /* dari skala suduk 0 sampai ke 1 */
         transform: scaleY(0);
         opacity: 0;
-        /* transition: .2s linear; */
+        transition: .3s linear;
     }
 
     header .navbar a{
@@ -892,10 +893,11 @@ nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink
      /* ------------------ */
     /* about 450  queries */
    /* ------------------ */
-
+   
     .about .column .content .buttons a{
         width:100%;
         text-align: center;
+        margin: 1rem 0;
     }
 
     .about .column .content .buttons a:last-child{
