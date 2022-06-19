@@ -848,6 +848,9 @@ nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink
 
     .home .image img{
         width:100%;
+        /* baru */
+        margin-top: -160px;
+        margin-bottom: 48px;
     }
 
     .home .content h3{
