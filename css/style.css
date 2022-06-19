@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-/* psuedo class root */
+/* pseudo element global (:root) ini digunakan untuk menampung variable css */
 :root{
     /* --purple:#814096; */
     --purple:rgb(120 73 215);
