@@ -1,8 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-/* pseudo element global (:root) ini digunakan untuk menampung variable css */
+/* pseudo class global (:root) ini digunakan untuk menampung variable css */
 :root{
     /* --purple:#814096; */
+    /* nama variable css harus di awali dengan simbol '--'  */
     --purple:rgb(120 73 215);
     --purple2: #be2edd;
     --deepkomaru: #30336b;
@@ -10,6 +11,7 @@
     --black: rgb(39, 38, 44);
     --blue: rgb(31, 199, 212);
     /* gradasi warna */
+    /* Fungsi var()ini digunakan untuk memasukkan nilai dari variabel CSS */
     --gradient:linear-gradient(90deg, var(--purple), var(--pink)); 
 }
 
@@ -25,9 +27,9 @@
     letter-spacing: 1.5px;
 }
 
-/* ketika menseleksi kalimat akan background akan berwarna pink dan huruf putih */
+/* ketika menseleksi kalimat background akan berwarna pink dan huruf putih */
 *::selection{
-    background:var(--pink);
+    background:var(--purple);
     color:#fff;
 }
 
@@ -35,22 +37,30 @@ html{
     /* Apabila parent element tag <div> adalah tag <body> yang ukuran fontnya tidak dinyatakan, 
     maka perent element akan ditentukan oleh ukuran default text web browser. Ukuran default web 
     browser ini disebut sebagai base text size yang umumnya berukuran 16px. */
+    /* membuat ukuran font lebih kecil 62.4% dari font default */
     font-size: 62.5%;
     /* Properti overflowmenentukan apa yang harus terjadi jika konten melebihi kotak elemen. */
+    /* supaya content di hidden dan muncul scroll nya. Saat nya kita gunakan overflow-x:hidden  */
     overflow-x: hidden;
 }
-
+/* warna background standard website */
 body{
     background:#f9f9f9;
 }
-
+/* setiap section memiliki minimal height 100vh (viewport height.)
+Satuan ini bergantung pada induk elemennya, jika induk elemen mempunyai ukuran 300px x 400px maka 1vh 
+darinya adalah 400 * 1/100 = 4px dan jika 100vh artinya adalah height yang kita tentukan 100% dari height induknya. */
 section{
     min-height: 100vh;
+    /* padding atas bawah 0 , kiri kanan 9% mengikuti element induk di atasnya jika element induk diatasnya tidak memiliki lebar maka akan di ambil lebar dari element induk di atasnya lagi */
     padding:0 9%;
-    padding-top: 7.5rem;
+    padding-top: 7.5rem;   /* rem = 16px */
     padding-bottom: 2rem;
 }
 
+/* 
+    button primary style
+*/
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -68,10 +78,15 @@ section{
     transform: scale(1.1);
 }
 
+/* 
+    heading text gradasi style
+*/
+/* text besar/judul/heading yang bergradasi*/
 .heading{
     text-align: center;
     background:var(--gradient);
     color:transparent;
+    /* digunakan untuk membuat warna text menjadi gradasi */
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 3.5rem;
@@ -79,44 +94,60 @@ section{
     padding:1rem;
 }
 
+/* 
+    Navbar Style
+*/
+
 header{
+    /* navbar posisi fixed artinya navbar akan keluar dan melayang dan 
+    tempat navbar sebelumnya akan di ambil oleh section di bawahnya */
     position: fixed;
     top:0; left:0;
+    /* lebar navbar 100% agar selalu sampai ujung layar */
     width:100%;
     background:#fff;
+    /* offset-x | offset-y | blur-radius | color */
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    /* padding atas bawah 2rem padding kiri kanan 9% */
     padding:2rem 9%;
+    /* Mmengatur bagaimana item fleksibel akan tumbuh atau menyusut agar sesuai 
+    dengan ruang yang tersedia di wadah fleksibelnya */
     display: flex;
+    /* Kotak margin item fleksibel dipusatkan di dalam garis pada sumbu silang. 
+    Jika ukuran silang item lebih besar dari wadah fleksibel, itu akan meluap secara 
+    merata di kedua arah.  Pack items around the center atas bawah */
     align-items: center;
+    /* Bagikan item secara merata Item pertama rata dengan ke kiri, yang terakhir rata dengan ke kanan */
     justify-content: space-between;
+    /* Properti z-indexmenentukan urutan tumpukan elemen. */
     z-index: 1000;
 }
-
+/* header logo  stream*/
 header .logo{
     font-size: 2rem;
     color:var(--deepkomaru);
 }
-
+/* header logo donut */
 header .logo span{
     color: var(--purple2);
 }
-
+/* menu pada navbar */
 header .navbar a{
     font-size: 1.7rem;
     margin-left: 2rem;
-    color:var(--purple);
+    color:var(--purple2);
 }
-
+/* psuedo class hover, jika cursor menyentuh element maka element akan berubah warna menjadi pink */
 header .navbar a:hover{
     color:var(--pink);
 }
-
-/* untuk child ke lima yang isinya button connect wallet tidak hover ke warna pink */
+/* agar btn connect tidak terkena hover di atas maka di setting menggunakan psuedo class nth-child */
+/* Kelas pseudo CSS mencocokkan elemen berdasarkan posisinya di antara sekelompok saudara kandung.:nth-child() */
 header .navbar a:nth-child(5) {
     color: #fff;
 }
 
-/* checkbox for hamburger menu */
+/* menghilangkan element/tampilan checkbox pada layar, navbar menggunakan input checkbox untuk membuat sistem true false atau buka tutup */
 header input{
     display: none;
 }
@@ -127,33 +158,43 @@ header label{
     color:var(--purple);
     /* agar kursor menjadi ikon tunjuk jari/pointer */
     cursor: pointer;
+    /* hidden dan opacity digunakan untuk menyembunyikan gambar hamburger saat layar desktop */
     visibility: hidden;
     opacity: 0;
 }
-
+/* menetralkan margin btn pada navbar karena class .btn sebelumnya memiliki margin 1rem  */
 header .navbar .btn {
-    color:#fff;
+    /* color:#fff; */
     margin-top: 0;
 }
 
+
+/* 
+    Home Section Style
+*/
+
 /* gambar background di landing hero pojok kanan */
 .home{
+    /* pakai flex agar element a dan b bisa bersebelahan */
     display: flex;
-    /* Properti align-itemsmenentukan perataan default untuk item di dalam wadah fleksibel. */
+    /* Properti align-items menentukan perataan default untuk item di dalam wadah fleksibel. */
     align-items: center;
+    /* element a dan b bertemu di tengah */
     justify-content: center;
     /* no repeat agar image tidak repeate */
     /* background:url(../images/home-bg-img.png) no-repeat; */
     /* Ubah ukuran gambar latar belakang untuk menutupi seluruh wadah, bahkan jika itu harus 
     meregangkan gambar atau memotong sedikit dari salah satu tepi */
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    /* background-position: center; */
 }
-
+/* donut img styling */
 .home .image img{
+    /* vw viewport width */
     width:40vw;
     /* animasi gambar mengambang secara linier durasi 3second dan infinite*/
     /* animation: float 3s linear infinite; */
+    /* @keyframes name | duration | easing-function | delay | playstate*/
     animation: float 3s ease-in-out 1s infinite;
 }
 
@@ -161,6 +202,7 @@ header .navbar .btn {
     0%{
         transform: translate(0px, 0px);
     }
+    /* 50% dari duration */
     50%{
         transform: translate(5px, 10px);
     }
@@ -183,6 +225,9 @@ header .navbar .btn {
     padding:1rem 0;
 }
 
+/* 
+    home features styling 
+*/
 .features .box-container{
     display: flex;
     /* rata atas bawah */
@@ -202,9 +247,27 @@ header .navbar .btn {
 
 .features .box-container .box{
     /* flex: flex-grow flex-shrink flex-basis */
-    /* Angka yang menentukan berapa banyak item akan tumbuh relatif terhadap sisa item fleksibel */
-    /* Angka yang menentukan berapa banyak item akan menyusut relatif terhadap sisa item fleksibel */
-    /* Panjang item. Nilai hukum: "auto", "inherit", atau angka yang diikuti oleh "%", "px", "em" atau satuan panjang lainnya */
+    /*  Flex-grow
+    Flex-grow memberi tahu elemen kita apakah itu bisa memakan ruang tambahan atau tidak.
+    Saat kami menetapkan nilai flex-grow 1 atau lebih besar, kami memberi tahu elemen kami 
+    untuk tumbuh untuk mengambil ruang yang tersedia. Elemen dengan nilai flex-grow yang 
+    disetel ke 0 tidak akan tumbuh untuk mengambil ruang yang tersedia.
+
+    flex-shrink Elemen dengan nilai flex-shrink 0 tidak akan menyusut saat halaman kita semakin 
+    kecil. Ini hanya berlaku jika tidak ada nilai flex-grow pada elemen ini. Jika ada nilai 
+    flex-grow, elemen tidak akan menyusut lebih kecil dari kontennya. Elemen dengan nilai 
+    penyusutan fleksibel 1 akan menyusut, tetapi tidak lebih kecil dari kontennya.
+    */
+    /* flex-basis
+    fleksibel: 1 0 200 piksel;
+    Jika Anda memiliki satu elemen yang memiliki flex-basis 200px, flex-grow 1, dan flex-shrink 0, 
+    elemen ini akan memiliki lebar minimal 200px, tetapi akan dibiarkan tumbuh jika ada ruang ekstra. 
+    Dalam hal ini, Anda dapat menganggap basis fleksibel sebagai lebar minimum.
+
+    fleksibel: 0 1 200px;
+    Mari kita pertimbangkan kasus sebaliknya. Mari kita atur flex-basis 200px lagi, tapi mari kita hanya 
+    mengatur flex-shrink 1, flex-grow akan menjadi 0. Di sini kita akan memiliki elemen yang terbesar 200px, 
+    tetapi diizinkan untuk lebih kecil. Di sini flex-basis bertindak seperti lebar maksimum. */
     flex:1 1 30rem;
     background:#fff;
     border-radius: .5rem;
@@ -214,7 +277,7 @@ header .navbar .btn {
     padding:3rem 2rem;
     border-radius: .5rem;
     text-align: center;
-    transition: .2s linear;
+    /* transition: 1.2s linear; */
 }
 
 .features .box-container .box img{
@@ -239,16 +302,21 @@ header .navbar .btn {
 /* ------------------------ */
 .home-start-money{
     /* background:url(../images/about-bg.png) no-repeat; */
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover;
+    background-position: center; */
     padding-bottom: 3rem;
 }
 
 .home-start-money .column{
+    /* agar element a dan b sejajar */
     display: flex;
+    /* rata tengah atas bawah */
     align-items: center;
+    /* agara element a dan b saling bertemu di tengah */
     justify-content: center;
+    /* membungkus element a dan b */
     flex-wrap: wrap;
+    /* margin atas 20px */
     margin-top: 20px;
 }
 
@@ -256,7 +324,6 @@ header .navbar .btn {
     flex:1 1 40rem;
     /* transform: rotateY(180deg); */
     display: inline-block;
-    
 }
 
 .home-start-money .column .image img{
@@ -264,6 +331,9 @@ header .navbar .btn {
 }
 
 .home-start-money .column .content{
+    /* flex-grow | flex-shrink | flex-basis */
+    /* jika flex-grow 1 maka element akan membesar jika ada ruangan ekstra ketika layar membesar */
+    /* jika flex-shrink 1 maka element akan mengecil ketika layar mengecil dan maksimal besarnya 40rem*/
     flex:1 1 40rem;
 }
 
@@ -336,16 +406,13 @@ header .navbar .btn {
     margin-left: 2rem;
 }
 
-  /* ------------------ */
- /* newsletter styling */
-/* ------------------ */
+  /* ----------------------------------- */
+ /* newsletter/start in seccond styling */
+/* ----------------------------------- */
 .newsletter{
     text-align: center;
     padding:5rem 1rem;
-    /* background:url(../images/subscribe-bg.png) no-repeat; */
     background-color: var(--purple);
-    background-size: cover;
-    background-position: center;
 }
 
 .newsletter h3{
@@ -371,33 +438,6 @@ header .navbar .btn {
     height:5.5rem;
 }
 
-.newsletter form input[type="email"]{
-    padding:0 2rem;
-    font-size: 1.7rem;
-    background:none;
-    width:100%;
-    color:#fff;
-    text-transform: none;
-    background:none;
-}
-
-.newsletter form input[type="email"]::placeholder{
-    color:#eee;
-    text-transform: capitalize;
-}
-
-.newsletter form input[type="submit"]{
-    background:#fff;
-    width:20rem;
-    font-size: 1.7rem;
-    border-radius: 5rem;
-    cursor: pointer;
-}
-
-.newsletter form input[type="submit"]:hover{
-    color:var(--pink);
-}
-
   /* ------------------ */
  /* payment     styling */
 /* ------------------ */
@@ -409,31 +449,35 @@ header .navbar .btn {
     flex-wrap: wrap;
 }
 
-@media (max-width:1066px){
+/* @media (max-width:1066px){
     
     .payment .box-container {
         max-width: 51rem;
         margin: auto;
     }
 
-}
+} */
 
 .payment .box-container .box{
     margin:0.5rem;
     padding:1rem;
     text-align: center;
+    /* Value relative digunakan untuk membuat suatu element bisa dipindah pindahkan  */
     position: relative;
     flex:1 1 30rem;
     max-width: 24rem;
 }
 
-.payment .box-container .box .fa-quote-right{
+/* .payment .box-container .box .fa-quote-right{
+    Value absolute digunakan untuk membuat suatu elemen bisa dipindahkan dan membuat elemen 
+    mengambang ke atas dibanding element lain. Bedanya dengan property relative, pada property absolute 
+    layer bawahnya akan bergeser seolah olah berada di bawah layer dengan property relative.
     position: absolute;
     top:1rem; right:2rem;
     font-size: 3rem;
-    color:var(--pink);
+    color:var(--black);
     opacity: .3;
-}
+} */
 
 .payment .box-container .box .user img{
     border-radius: 50%;
@@ -448,17 +492,17 @@ header .navbar .btn {
     font-size: 2rem;
 }
 
-.payment .box-container .box .user .stars i{
+/* .payment .box-container .box .user .stars i{
     color:var(--purple);
     font-size: 1.5rem;
     padding:1rem 0;
-}
+} */
 
-.payment .box-container .box .comment{
+/* .payment .box-container .box .comment{
     color:#666;
     font-size: 1.4rem;
     padding:1rem;
-}
+} */
 
   /* ------------------ */
  /* team     styling */
@@ -476,14 +520,14 @@ header .navbar .btn {
     flex-wrap: wrap;
 }
 
-@media (max-width:1066px){
+/* @media (max-width:1066px){
     
     .team .box-container {
         max-width: 51rem;
         margin: auto;
     }
 
-}
+} */
 
 .team .box-container .box{
     background:#fff;
@@ -498,13 +542,13 @@ header .navbar .btn {
     max-width: 24rem;
 }
 
-.team .box-container .box .fa-quote-right{
+/* .team .box-container .box .fa-quote-right{
     position: absolute;
     top:1rem; right:2rem;
     font-size: 3rem;
     color:var(--pink);
     opacity: .3;
-}
+} */
 
 .team .box-container .box .user img{
     border-radius: 10%;
@@ -534,7 +578,7 @@ header .navbar .btn {
   /* ------------------ */
  /* pricing    styling */
 /* ------------------ */
-.pricing .box-container{
+/* .pricing .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -553,7 +597,7 @@ header .navbar .btn {
     padding-bottom: 3rem;
 }
 
-/* nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink */
+nth child 2 maksudnya bx pricing ke2 akan selalu memiliki border pink
 .pricing .box-container .box:nth-child(2),
 .pricing .box-container .box:hover{
     border:.2rem solid var(--pink);
@@ -592,7 +636,7 @@ header .navbar .btn {
 
 .pricing .box-container .box ul li .fa-times{
     color:tomato;
-}
+} */
 
   /* ------------------ */
  /* footer     styling */
@@ -773,7 +817,7 @@ header .navbar .btn {
         /* dari skala suduk 0 sampai ke 1 */
         transform: scaleY(0);
         opacity: 0;
-        transition: .2s linear;
+        /* transition: .2s linear; */
     }
 
     header .navbar a{
